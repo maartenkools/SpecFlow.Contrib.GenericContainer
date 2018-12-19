@@ -23,7 +23,7 @@ test:
       - '**\*.Tests.dll'
 
 artifacts:
-- path: '%APPVEYOR_BUILD_FOLDER%\artifacts\**\*.nupkg'
+- path: 'artifacts\**\*.nupkg'
   name: NuGet
 
 deploy:
