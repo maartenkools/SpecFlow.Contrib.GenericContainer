@@ -15,7 +15,7 @@ before_build:
 
 build_script:
   - cmd: dotnet build .\src\SpecFlow.GenericContainer.sln -c Release -v q --no-restore /nologo
-  - cmd: dotnet pack .\src\SpecFlow.GenericContainer.sln -c Release -o .\artifacts --include-symbols --no-build --no-restore /nologo -p:PackageVersion="%GitVersion_NuGetVersion%"
+  - cmd: dotnet pack .\src\SpecFlow.GenericContainer.sln -c Release -o "%APPVEYOR_BUILD_FOLDER%\artifacts" --include-symbols --no-build --no-restore /nologo -p:PackageVersion="%GitVersion_NuGetVersion%"
 
 test:
   assemblies:
@@ -23,7 +23,7 @@ test:
       - '**\*.Tests.dll'
 
 artifacts:
-- path: '.\artifacts\**\*.nupkg'
+- path: '%APPVEYOR_BUILD_FOLDER%\artifacts\**\*.nupkg'
   name: NuGet
 
 deploy:
