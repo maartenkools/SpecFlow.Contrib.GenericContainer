@@ -15,6 +15,11 @@ before_build:
   - cmd: dotnet build .\src\SpecFlow.GenericContainer.sln -c Release -v q --no-restore /nologo
   - cmd: dotnet pack .\src\SpecFlow.GenericContainer.sln -c Release -o .\artifacts --include-symbols --no-build --no-restore /nologo -p:PackageVersion="%GitVersion_NuGetVersion%"
 
+test:
+  assemblies:
+    only:
+      - '**\*.Tests.dll'
+
 artifacts:
 - path: '.\artifacts\**\*.nupkg'
   name: NuGet
