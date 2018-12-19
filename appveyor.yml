@@ -1,0 +1,36 @@
+version: '{build}'
+
+install:
+  - choco install gitversion.portable -pre -y
+
+assembly_info:
+  patch: false
+
+nuget:
+  disable_publish_on_pr: true
+
+before_build:
+  - cmd: dotnet restore .\src\SpecFlow.GenericContainer.sln
+  - cmd: gitversion /l console /output buildserver /updateAssemblyInfo
+
+build_script:
+  - cmd: dotnet build .\src\SpecFlow.GenericContainer.sln -c Release -v q --no-restore /nologo
+  - cmd: dotnet pack .\src\SpecFlow.GenericContainer.sln -c Release -o "%APPVEYOR_BUILD_FOLDER%\artifacts" --include-symbols --no-build --no-restore /nologo -p:PackageVersion="%GitVersion_NuGetVersion%"
+
+test:
+  assemblies:
+    only:
+      - '**\*.Tests.dll'
+
+artifacts:
+- path: 'artifacts\**\*.nupkg'
+  name: NuGet
+
+deploy:
+- provider: NuGet
+  name: production
+  api_key:
+    secure: clUnJlfR9/a4dTu2340OT2XEgmQvFdDRwkqZbt2r+yTq4XAC+L536GpWhkSy4bu1
+  on:
+    branch: master
+    appveyor_repo_tag: true
