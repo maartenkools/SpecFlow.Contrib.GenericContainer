@@ -15,9 +15,6 @@ before_build:
   - cmd: dotnet build .\src\SpecFlow.GenericContainer.sln -c Release -v q --no-restore /nologo
   - cmd: dotnet pack .\src\SpecFlow.GenericContainer.sln -c Release -o .\artifacts --include-symbols --no-build --no-restore /nologo -p:PackageVersion="%GitVersion_NuGetVersion%"
 
-build_script:
-- ps: .\build.ps1
-
 artifacts:
 - path: '.\artifacts\**\*.nupkg'
   name: NuGet

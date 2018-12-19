@@ -10,51 +10,49 @@ A SpecFlow plugin that provides a generic way to implement a custom DI container
 ```csharp
 public class SimpleInjectorContainer : IGenericContainer
 {
-	private readonly Container _container;
+  private readonly Container _container;
 
     public SimpleInjectorContainer(Container container)
     {
-  		_container = container;
-  	}
+      _container = container;
+    }
 
-  	public void Register<TService>(Func<TService> instanceCreator)
-  		where TService : class
-  	{
-  		_container.Register(instanceCreator);
-  	}
+    public void Register<TService>(Func<TService> instanceCreator)
+      where TService : class
+    {
+      _container.Register(instanceCreator);
+    }
 
-  	public object Resolve(Type bindingType)
-  	{
-    	return _container.GetInstance(bindingType);
-  	}
+    public object Resolve(Type bindingType)
+    {
+      return _container.GetInstance(bindingType);
+    }
 
-  	public TService Resolve<TService>()
-  		where TService : class
-  	{
-  		return _container.GetInstance<TService>();
-  	}
+    public TService Resolve<TService>()
+      where TService : class
+    {
+      return _container.GetInstance<TService>();
+    }
 }
 ```
 ```csharp
 public static class Dependencies
 {
-	[ScenarioDependencies]
-	public static IGenericContainer CreateContainer()
-	{
-		var container = new Container();
-		container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
-		container.Options.DefaultLifestyle = Lifestyle.Singleton;
+  [ScenarioDependencies]
+  public static IGenericContainer CreateContainer()
+  {
+    var container = new Container();
+    container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
+    container.Options.DefaultLifestyle = Lifestyle.Singleton;
 
-		// Add your registrations here
+    // Add your registrations here
 
-        foreach (var type in typeof(Dependencies).Assembly
-        										 .GetTypes()
-        										 .Where(t => Attribute.IsDefined(t, typeof(BindingAttribute))))
-        {
-        	container.Register(type);
-        }
+    foreach (var type in typeof(Dependencies).Assembly.GetTypes().Where(t => Attribute.IsDefined(t, typeof(BindingAttribute))))
+    {
+      container.Register(type);
+    }
 
-		return new SimpleInjectorContainer(container);
-	}
+    return new SimpleInjectorContainer(container);
+  }
 }
 ```
