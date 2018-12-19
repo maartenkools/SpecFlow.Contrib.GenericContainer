@@ -1,7 +1,7 @@
-﻿using SimpleInjector;
-using System;
+﻿using System;
+using SimpleInjector;
 
-namespace SpecFlow.GenericContainer.SpecFlowPlugin.Tests
+namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin.Tests
 {
     public class SimpleInjectorContainer : IGenericContainer
     {

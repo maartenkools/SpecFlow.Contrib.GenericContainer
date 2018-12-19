@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SpecFlow.GenericContainer.SpecFlowPlugin.Tests
+namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin.Tests
 {
     public class Calculator : ICalculator
     {

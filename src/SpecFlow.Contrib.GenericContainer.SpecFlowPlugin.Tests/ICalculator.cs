@@ -1,4 +1,4 @@
-﻿namespace SpecFlow.GenericContainer.SpecFlowPlugin.Tests
+﻿namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin.Tests
 {
     public interface ICalculator
     {

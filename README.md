@@ -2,7 +2,7 @@
 A SpecFlow plugin that provides a generic way to implement a custom DI container
 
 [![Build status](https://ci.appveyor.com/api/projects/status/jlhywg2nulwescgy/branch/master?svg=true)](https://ci.appveyor.com/project/maartenkools/specflow-genericcontainer/branch/master)
-[![NuGet status](https://img.shields.io/nuget/v/SpecFlow.GenericContainer.svg)](https://www.nuget.org/packages/SpecFlow.GenericContainer/)
+[![NuGet status](https://img.shields.io/nuget/v/SpecFlow.Contrib.GenericContainer.svg)](https://www.nuget.org/packages/SpecFlow.Contrib.GenericContainer/)
 
 # Usage
 1. Create a class that implements the `IGenericContainer` interface and wraps your DI container.

@@ -4,7 +4,7 @@ using System.Reflection;
 using TechTalk.SpecFlow.Bindings;
 using TechTalk.SpecFlow.Bindings.Reflection;
 
-namespace SpecFlow.GenericContainer.SpecFlowPlugin
+namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin
 {
     internal static class BindingRegistryExtensions
     {

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using TechTalk.SpecFlow.Bindings;
 
-namespace SpecFlow.GenericContainer.SpecFlowPlugin
+namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin
 {
     internal class ContainerFinder : IContainerFinder
     {

@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using TechTalk.SpecFlow;
 
-namespace SpecFlow.GenericContainer.SpecFlowPlugin.Tests
+namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin.Tests
 {
     public static class Dependencies
     {

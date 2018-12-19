@@ -1,8 +1,8 @@
-﻿using BoDi;
-using System;
+﻿using System;
+using BoDi;
 using TechTalk.SpecFlow.Infrastructure;
 
-namespace SpecFlow.GenericContainer.SpecFlowPlugin
+namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin
 {
     internal class BindingInstanceResolver : ITestObjectResolver
     {

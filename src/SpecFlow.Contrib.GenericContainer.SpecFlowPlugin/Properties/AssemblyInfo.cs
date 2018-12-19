@@ -2,8 +2,8 @@
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-using SpecFlow.GenericContainer.SpecFlowPlugin;
 using System.Reflection;
+using SpecFlow.Contrib.GenericContainer.SpecFlowPlugin;
 using TechTalk.SpecFlow.Plugins;
 
 [assembly: AssemblyTitle("SpecFlow.GenericContainer")]
