@@ -1,10 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net462;net47;net471</TargetFrameworks>
+    <TargetFrameworks>net45;net462;net47;net471</TargetFrameworks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <PackageLicenseUrl>http://opensource.org/licenses/mit-license.php</PackageLicenseUrl>
     <PackageTags>specflow dependency-injection DI inversion-of-control IOC</PackageTags>
+    <PackageProjectUrl>https://github.com/maartenkools/SpecFlow.GenericContainer</PackageProjectUrl>
+    <PackageDescription>A SpecFlow plugin that provides a generic way to implement a custom DI container</PackageDescription>
     <Authors>Maarten Kools</Authors>
   </PropertyGroup>
 
