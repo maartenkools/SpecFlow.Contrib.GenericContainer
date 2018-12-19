@@ -3,7 +3,7 @@ using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Infrastructure;
 using TechTalk.SpecFlow.Plugins;
 
-namespace SpecFlow.GenericContainer.SpecFlowPlugin
+namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin
 {
     public class GenericContainerPlugin : IRuntimePlugin
     {

@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using TechTalk.SpecFlow;
 
-namespace SpecFlow.GenericContainer.SpecFlowPlugin.Tests.Steps
+namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin.Tests.Steps
 {
     [Binding]
     public class IntegrationTestsSteps

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpecFlow.GenericContainer.SpecFlowPlugin.Tests.Features
+namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin.Tests.Features
 {
     using TechTalk.SpecFlow;
     
@@ -77,16 +77,16 @@ namespace SpecFlow.GenericContainer.SpecFlowPlugin.Tests.Features
         public virtual void AddTwoNumbers(string operand1, string operand2, string result, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, exampleTags);
-#line 6
+#line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 7
+#line 6
  testRunner.Given(string.Format("I have entered {0} into the calculator", operand1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
+#line 7
  testRunner.And(string.Format("I have entered {0} into the calculator", operand2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 9
+#line 8
  testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
+#line 9
  testRunner.Then(string.Format("the result should be {0} on the screen", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

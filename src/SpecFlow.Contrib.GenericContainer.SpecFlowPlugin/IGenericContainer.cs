@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SpecFlow.GenericContainer.SpecFlowPlugin
+namespace SpecFlow.Contrib.GenericContainer.SpecFlowPlugin
 {
     public interface IGenericContainer
     {

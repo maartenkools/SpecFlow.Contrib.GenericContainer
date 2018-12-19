@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SpecFlow.GenericContainer.SpecFlowPlugin\SpecFlow.GenericContainer.SpecFlowPlugin.csproj" />
+    <ProjectReference Include="..\SpecFlow.Contrib.GenericContainer.SpecFlowPlugin\SpecFlow.Contrib.GenericContainer.SpecFlowPlugin.csproj" />
   </ItemGroup>
 
   <ItemGroup>
